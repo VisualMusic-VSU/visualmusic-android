@@ -7,6 +7,10 @@ android {
     namespace = "app.visualmusic"
     compileSdk = 35
 
+    buildFeatures {
+        viewBinding = true
+    }
+
     defaultConfig {
         applicationId = "app.visualmusic"
         minSdk = 30
