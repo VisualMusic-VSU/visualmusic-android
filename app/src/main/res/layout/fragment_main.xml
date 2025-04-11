@@ -10,13 +10,15 @@
 
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/top_app_bar"
+        style="@style/Widget.VisualMusic.TopAppBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
         app:menu="@menu/top_app_bar_main_menu"
         app:navigationIcon="@drawable/ic_moon"
         app:title="@string/upper_app_name"
-        app:titleCentered="true" />
+        app:titleCentered="true"
+        app:titleTextAppearance="@style/TextAppearance.Material3.HeadlineSmall" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -31,6 +33,7 @@
             android:layout_marginTop="60dp"
             android:text="@string/slogan_text_1"
             android:textAllCaps="true"
+            android:textColor="@color/md_theme_onSurface"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -43,6 +46,7 @@
             android:layout_marginTop="@dimen/margin_5dp"
             android:text="@string/slogan_text_2"
             android:textAllCaps="true"
+            android:textColor="@color/md_theme_onSurface"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@id/slogan_text_1" />
@@ -55,6 +59,7 @@
             android:layout_marginTop="@dimen/margin_5dp"
             android:text="@string/slogan_text_3"
             android:textAllCaps="true"
+            android:textColor="@color/md_theme_onSurface"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@id/slogan_text_2" />
@@ -67,6 +72,7 @@
             android:layout_marginTop="@dimen/margin_5dp"
             android:text="@string/slogan_text_4"
             android:textAllCaps="true"
+            android:textColor="@color/md_theme_onSurface"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@id/slogan_text_3" />
@@ -74,12 +80,12 @@
         <com.google.android.material.imageview.ShapeableImageView
             android:layout_width="@dimen/vinyl_record_size"
             android:layout_height="@dimen/vinyl_record_size"
+            android:layout_marginBottom="@dimen/bottom_margin"
+            android:rotation="180"
             android:src="@drawable/vinyl_record"
             app:layout_constraintBottom_toTopOf="@id/bottom_card_view"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            android:rotation="180"
-            android:layout_marginBottom="@dimen/bottom_margin"/>
+            app:layout_constraintRight_toRightOf="parent" />
 
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/bottom_card_view"

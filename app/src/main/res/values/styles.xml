@@ -23,4 +23,15 @@
         <item name="cornerSizeBottomLeft">@dimen/corner_0dp</item>
         <item name="cornerSizeBottomRight">@dimen/corner_0dp</item>
     </style>
+
+    <!--  Top App Bar  -->
+    <style name="Widget.VisualMusic.TopAppBar" parent="Widget.Material3.Toolbar">
+        <item name="navigationIconTint">@color/md_theme_onSurface</item>
+        <item name="android:theme">@style/ThemeOverlay.VisualMusic.TopAppBar.MenuIcons</item>
+    </style>
+
+    <style name="ThemeOverlay.VisualMusic.TopAppBar.MenuIcons" parent="ThemeOverlay.MaterialComponents.Toolbar.Primary">
+        <item name="iconTint">@color/md_theme_onSurface</item>
+    </style>
+
 </resources>
