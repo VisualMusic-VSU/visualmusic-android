@@ -1,6 +1,28 @@
 <resources>
-
     <style name="Base.Theme.VisualMusic" parent="Theme.Material3.Light.NoActionBar">
+        <!--    Typography    -->
+        <item name="textAppearanceDisplayLarge">@style/TextAppearance.VisualMusic.DisplayLarge</item>
+        <item name="textAppearanceDisplayMedium">@style/TextAppearance.VisualMusic.DisplayMedium</item>
+        <item name="textAppearanceDisplaySmall">@style/TextAppearance.VisualMusic.DisplaySmall</item>
+
+        <item name="textAppearanceHeadlineLarge">@style/TextAppearance.VisualMusic.HeadlineLarge</item>
+        <item name="textAppearanceHeadlineMedium">@style/TextAppearance.VisualMusic.HeadlineMedium</item>
+        <item name="textAppearanceHeadlineSmall">@style/TextAppearance.VisualMusic.HeadlineSmall</item>
+
+        <item name="textAppearanceTitleLarge">@style/TextAppearance.VisualMusic.TitleLarge</item>
+        <item name="textAppearanceTitleMedium">@style/TextAppearance.VisualMusic.TitleMedium</item>
+        <item name="textAppearanceTitleSmall">@style/TextAppearance.VisualMusic.TitleSmall</item>
+
+        <item name="textAppearanceLabelLarge">@style/TextAppearance.VisualMusic.LabelLarge</item>
+        <item name="textAppearanceLabelMedium">@style/TextAppearance.VisualMusic.LabelMedium</item>
+        <item name="textAppearanceLabelSmall">@style/TextAppearance.VisualMusic.LabelSmall</item>
+
+        <item name="textAppearanceBodyLarge">@style/TextAppearance.VisualMusic.BodyLarge</item>
+        <item name="textAppearanceBodyMedium">@style/TextAppearance.VisualMusic.BodyMedium</item>
+        <item name="textAppearanceBodySmall">@style/TextAppearance.VisualMusic.BodySmall</item>
+
+
+        <!--    Colors    -->
         <item name="colorPrimary">@color/md_theme_primary</item>
         <item name="colorOnPrimary">@color/md_theme_onPrimary</item>
         <item name="colorPrimaryContainer">@color/md_theme_primaryContainer</item>
