@@ -16,7 +16,7 @@
         </item>
     </style>
 
-    <style name="ShapeAppearance.VisualMusic.CardView.MainScreen">
+    <style name="ShapeAppearance.VisualMusic.CardView.MainScreen" parent="ShapeAppearance.Material3.Corner.None">
         <item name="cornerFamily">rounded</item>
         <item name="cornerSizeTopLeft">@dimen/corner_40dp</item>
         <item name="cornerSizeTopRight">@dimen/corner_40dp</item>
