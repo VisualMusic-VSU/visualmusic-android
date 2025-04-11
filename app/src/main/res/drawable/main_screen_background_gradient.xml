@@ -6,6 +6,6 @@
         android:startColor="@color/main_screen_start_color"
         android:centerColor="@color/main_screen_center_color"
         android:endColor="@color/main_screen_end_color"
-        android:centerX="0.16"
+        android:centerX="0.25"
         android:angle="270" />
 </shape>

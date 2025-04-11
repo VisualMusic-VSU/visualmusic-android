@@ -3,7 +3,7 @@
     <!--  Main Screen Gradient  -->
     <color name="main_screen_start_color">@color/md_theme_surfaceContainerLowest</color>
     <color name="main_screen_center_color">#F2F2F2</color>
-    <color name="main_screen_end_color">#E5E5E5</color>
+    <color name="main_screen_end_color">#CCCCCC</color>
 
 
     <!--  M3 Material Palette  -->

@@ -86,7 +86,7 @@
             style="@style/Widget.VisualMusic.CardView.MainScreen"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/md_theme_surfaceContainerLowest"
+            android:background="@drawable/main_screen_background_gradient"
             app:layout_constraintBottom_toBottomOf="parent"
             app:strokeWidth="0dp">
 
