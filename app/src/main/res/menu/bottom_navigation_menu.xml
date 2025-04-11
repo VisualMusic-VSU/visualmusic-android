@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/galleryScreen"
+        android:title="@string/gallery_screen_title"
+        android:enabled="true"
+        android:icon="@drawable/ic_images"/>
+
+    <item
+        android:id="@+id/mainScreen"
+        android:title="@string/main_screen_title"
+        android:enabled="true"
+        android:icon="@drawable/ic_house"/>
+
+    <item
+        android:id="@+id/collectionsScreen"
+        android:title="@string/collections_screen_title"
+        android:enabled="true"
+        android:icon="@drawable/ic_library"/>
+</menu>
