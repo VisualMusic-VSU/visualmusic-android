@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/md_theme_surfaceContainerLowest"
+    tools:context=".presentation.main.screen.collection.CollectionFragment">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/top_app_bar"
+        style="@style/Widget.VisualMusic.TopAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_45dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:menu="@menu/top_app_bar_collection_menu"
+        app:title="@string/collection_screen_title"
+        app:titleTextAppearance="@style/TextAppearance.VisualMusic.TitleLarge" />
+
+    <com.google.android.material.button.MaterialButtonToggleGroup
+        android:id="@+id/toggle_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/height_30dp"
+        android:layout_marginTop="@dimen/margin_5dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/top_app_bar">
+
+        <Button
+            android:id="@+id/generated_btn"
+            style="@style/Widget.VisualMusic.Button.OutlinedButton.IconOnly"
+            android:layout_width="@dimen/width_105dp"
+            android:layout_height="wrap_content"
+            app:icon="@drawable/ic_book" />
+
+        <Button
+            android:id="@+id/saved_btn"
+            style="@style/Widget.VisualMusic.Button.OutlinedButton.IconOnly"
+            android:layout_width="@dimen/width_105dp"
+            android:layout_height="wrap_content"
+            app:icon="@drawable/ic_heart" />
+
+    </com.google.android.material.button.MaterialButtonToggleGroup>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/margin_5dp"
+        app:layout_constraintTop_toBottomOf="@id/toggle_btn"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

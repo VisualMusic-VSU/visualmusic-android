@@ -13,7 +13,7 @@
         android:icon="@drawable/ic_house"/>
 
     <item
-        android:id="@+id/collectionsScreen"
+        android:id="@+id/collectionScreen"
         android:title="@string/collections_screen_title"
         android:enabled="true"
         android:icon="@drawable/ic_library"/>

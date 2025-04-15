@@ -35,4 +35,11 @@
     <string name="example_subscription_start_date">20 февраля 2025</string>
     <string name="example_subscription_end_date">6 июня 2025</string>
 
+
+    <!--  Collection Screen Top App Bar  -->
+    <string name="collection_screen_title">Коллекция</string>
+
+    <string name="settings">Настройки</string>
+    <string name="content_description_settings">Настройки</string>
+
 </resources>
