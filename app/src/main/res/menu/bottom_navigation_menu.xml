@@ -14,7 +14,7 @@
 
     <item
         android:id="@+id/collectionScreen"
-        android:title="@string/collections_screen_title"
+        android:title="@string/collection_screen_title"
         android:enabled="true"
         android:icon="@drawable/ic_library"/>
 </menu>

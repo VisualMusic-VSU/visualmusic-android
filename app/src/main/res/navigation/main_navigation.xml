@@ -15,4 +15,9 @@
         android:name="app.visualmusic.presentation.main.screen.collection.CollectionFragment"
         android:label="fragment_collection"
         tools:layout="@layout/fragment_collection" />
+    <fragment
+        android:id="@+id/galleryScreen"
+        android:name="app.visualmusic.presentation.main.screen.gallery.GalleryFragment"
+        android:label="fragment_gallery"
+        tools:layout="@layout/fragment_gallery" />
 </navigation>
