@@ -3,11 +3,16 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation"
-    app:startDestination="@id/mainFragment">
+    app:startDestination="@id/mainScreen">
 
     <fragment
-        android:id="@+id/mainFragment"
+        android:id="@+id/mainScreen"
         android:name="app.visualmusic.presentation.main.screen.main.MainFragment"
         android:label="fragment_main"
         tools:layout="@layout/fragment_main" />
+    <fragment
+        android:id="@+id/collectionScreen"
+        android:name="app.visualmusic.presentation.main.screen.collection.CollectionFragment"
+        android:label="fragment_collection"
+        tools:layout="@layout/fragment_collection" />
 </navigation>
