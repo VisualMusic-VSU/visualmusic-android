@@ -18,6 +18,7 @@
 
     <com.google.android.material.chip.Chip
         android:id="@+id/sort"
+        app:chipIconTint="@color/chip_icon_tint_selector"
         style="@style/Widget.Material3.Chip.Filter.Elevated"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
