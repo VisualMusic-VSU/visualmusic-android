@@ -14,7 +14,7 @@
         android:layout_height="@dimen/height_45dp"
         app:layout_constraintTop_toTopOf="parent"
         app:menu="@menu/top_app_bar_collection_menu"
-        app:title="@string/upper_app_name"
+        app:title="@string/collection_screen_title"
         app:titleTextAppearance="@style/TextAppearance.VisualMusic.TitleLarge" />
 
     <com.google.android.material.button.MaterialButtonToggleGroup

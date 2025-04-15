@@ -37,6 +37,8 @@
 
 
     <!--  Collection Screen Top App Bar  -->
+    <string name="collection_screen_title">Коллекция</string>
+
     <string name="settings">Настройки</string>
     <string name="content_description_settings">Настройки</string>
 
