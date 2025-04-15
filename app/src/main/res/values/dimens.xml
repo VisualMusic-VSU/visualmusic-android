@@ -17,9 +17,13 @@
     <!--  Width & Height  -->
     <dimen name="width_300dp">300dp</dimen>
     <dimen name="width_280dp">280dp</dimen>
+    <dimen name="width_210dp">210dp</dimen>
+    <dimen name="width_105dp">105dp</dimen>
 
     <dimen name="height_70dp">70dp</dimen>
     <dimen name="height_50dp">50dp</dimen>
+    <dimen name="height_45dp">45dp</dimen>
+    <dimen name="height_30dp">30dp</dimen>
 
     <!--  Main Screen Vinyl Record  -->
     <dimen name="vinyl_record_size">350dp</dimen>
