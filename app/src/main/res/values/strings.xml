@@ -5,7 +5,8 @@
     <!--  Bottom Navigation Menu  -->
     <string name="gallery_screen_title">Галерея работ</string>
     <string name="main_screen_title">Главный экран</string>
-    <string name="collections_screen_title">Коллекции</string>
+    <string name="collection_screen_title">Коллекции</string>
+
 
 
     <!--  Main Screen Top App Bar  -->
@@ -37,9 +38,14 @@
 
 
     <!--  Collection Screen Top App Bar  -->
-    <string name="collection_screen_title">Коллекция</string>
-
     <string name="settings">Настройки</string>
     <string name="content_description_settings">Настройки</string>
+
+
+
+    <!--  Gallery Screen Filters  -->
+    <string name="genres_filter">Жанры</string>
+    <string name="mood_filter">Настроение</string>
+    <string name="style_filter">Стиль</string>
 
 </resources>
