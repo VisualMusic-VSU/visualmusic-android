@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/generation_navigation">
+    android:id="@+id/generation_navigation"
+    app:startDestination="@id/autoGenerationFragment">
 
+    <fragment
+        android:id="@+id/autoGenerationFragment"
+        android:name="app.visualmusic.presentation.generation.screen.AutoGenerationFragment"
+        android:label="AutoGenerationFragment" />
 </navigation>

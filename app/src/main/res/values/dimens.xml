@@ -6,6 +6,9 @@
     <dimen name="margin_15dp">15dp</dimen>
     <dimen name="margin_20dp">20dp</dimen>
     <dimen name="margin_25dp">25dp</dimen>
+    <dimen name="margin_30dp">30dp</dimen>
+    <dimen name="margin_40dp">40dp</dimen>
+    <dimen name="margin_60dp">60dp</dimen>
 
 
     <!--  Corner Radius  -->
@@ -15,12 +18,15 @@
 
 
     <!--  Width & Height  -->
+    <dimen name="width_360dp">360dp</dimen>
     <dimen name="width_300dp">300dp</dimen>
     <dimen name="width_280dp">280dp</dimen>
     <dimen name="width_210dp">210dp</dimen>
+    <dimen name="width_200dp">190dp</dimen>
     <dimen name="width_105dp">105dp</dimen>
 
     <dimen name="height_70dp">70dp</dimen>
+    <dimen name="height_60dp">60dp</dimen>
     <dimen name="height_50dp">50dp</dimen>
     <dimen name="height_45dp">45dp</dimen>
     <dimen name="height_30dp">30dp</dimen>

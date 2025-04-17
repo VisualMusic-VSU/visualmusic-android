@@ -2,11 +2,17 @@
     <string name="app_name">VisualMusic</string>
     <string name="upper_app_name">VISUALMUSIC</string>
 
+
+    <!--  Time Units  -->
+    <string name="time_unit_hours">ч</string>
+    <string name="time_unit_minutes">мин</string>
+    <string name="time_unit_seconds">сек</string>
+
+
     <!--  Bottom Navigation Menu  -->
     <string name="gallery_screen_title">Галерея работ</string>
     <string name="main_screen_title">Главный экран</string>
     <string name="collection_screen_title">Коллекции</string>
-
 
 
     <!--  Main Screen Top App Bar  -->
@@ -30,7 +36,7 @@
         Подписка активна\nСпасибо, что\nподдерживаете нас
     </string>
 
-    <string name="generate_btn">Генерация</string>
+    <string name="generation_btn">Генерация</string>
     <string name="subscribe_btn">Оформить подписку</string>
 
     <string name="example_subscription_start_date">20 февраля 2025</string>
@@ -42,10 +48,19 @@
     <string name="content_description_settings">Настройки</string>
 
 
-
     <!--  Gallery Screen Filters  -->
     <string name="genres_filter">Жанры</string>
     <string name="mood_filter">Настроение</string>
     <string name="style_filter">Стиль</string>
+
+
+    <!--  Generation Activity  -->
+    <string name="select_audio_btn">Выбрать аудио</string>
+    <string name="generate_btn">Сгенерировать</string>
+
+
+    <!--  Auto Generation Screen  -->
+    <string name="upload_audio_text">Загрузите аудио</string>
+    <string name="uploaded_audio_text">Загруженное аудио</string>
 
 </resources>
