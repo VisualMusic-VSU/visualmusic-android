@@ -1,10 +1,12 @@
 package app.visualmusic.common.view
 
 import android.content.Context
+import android.text.format.Formatter.formatFileSize
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.widget.FrameLayout
 import app.visualmusic.R
+import app.visualmusic.common.util.formatDuration
 import app.visualmusic.databinding.ViewAudioFileInfoBinding
 
 class AudioFileInfoView @JvmOverloads constructor(
@@ -50,11 +52,11 @@ class AudioFileInfoView @JvmOverloads constructor(
         binding.audioName.text = name
     }
 
-    fun setAudioSize(size: String) {
-        binding.audioSize.text = size
+    fun setAudioSize(sizeInBytes: Long) {
+        binding.audioSize.text = formatFileSize(context, sizeInBytes)
     }
 
-    fun setAudioDuration(duration: String) {
-        binding.audioDuration.text = duration
+    fun setAudioDuration(durationInSeconds: Long) {
+        binding.audioDuration.text = formatDuration(context, durationInSeconds)
     }
 }

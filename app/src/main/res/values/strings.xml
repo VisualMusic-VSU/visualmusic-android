@@ -2,11 +2,17 @@
     <string name="app_name">VisualMusic</string>
     <string name="upper_app_name">VISUALMUSIC</string>
 
+
+    <!--  Time Units  -->
+    <string name="time_unit_hours">ч</string>
+    <string name="time_unit_minutes">мин</string>
+    <string name="time_unit_seconds">сек</string>
+
+
     <!--  Bottom Navigation Menu  -->
     <string name="gallery_screen_title">Галерея работ</string>
     <string name="main_screen_title">Главный экран</string>
     <string name="collection_screen_title">Коллекции</string>
-
 
 
     <!--  Main Screen Top App Bar  -->
@@ -40,7 +46,6 @@
     <!--  Collection Screen Top App Bar  -->
     <string name="settings">Настройки</string>
     <string name="content_description_settings">Настройки</string>
-
 
 
     <!--  Gallery Screen Filters  -->
