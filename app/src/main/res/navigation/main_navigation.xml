@@ -9,7 +9,11 @@
         android:id="@+id/mainScreen"
         android:name="app.visualmusic.presentation.main.screen.main.MainFragment"
         android:label="fragment_main"
-        tools:layout="@layout/fragment_main" />
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainScreen_to_generationActivity"
+            app:destination="@id/generationActivity" />
+    </fragment>
     <fragment
         android:id="@+id/collectionScreen"
         android:name="app.visualmusic.presentation.main.screen.collection.CollectionFragment"
@@ -20,4 +24,8 @@
         android:name="app.visualmusic.presentation.main.screen.gallery.GalleryFragment"
         android:label="fragment_gallery"
         tools:layout="@layout/fragment_gallery" />
+    <activity
+        android:id="@+id/generationActivity"
+        android:name="app.visualmusic.presentation.generation.GenerationActivity"
+        android:label="GenerationActivity" />
 </navigation>
