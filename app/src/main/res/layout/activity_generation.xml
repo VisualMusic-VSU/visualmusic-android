@@ -47,4 +47,18 @@
 
     </com.google.android.material.button.MaterialButtonToggleGroup>
 
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragment_container"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/margin_5dp"
+        app:defaultNavHost="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toggle_btn"
+        app:layout_goneMarginTop="@dimen/margin_5dp"
+        app:navGraph="@navigation/generation_navigation" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
