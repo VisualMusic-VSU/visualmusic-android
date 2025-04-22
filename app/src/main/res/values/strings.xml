@@ -63,4 +63,8 @@
     <string name="upload_audio_text">Загрузите аудио</string>
     <string name="uploaded_audio_text">Загруженное аудио</string>
 
+
+    <!--  Generation Setting View  -->
+    <string name="auto_setting_status">Автоматически</string>
+    <string name="not_auto_setting_status">Не автоматически</string>
 </resources>
