@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/md_theme_surfaceContainerLowest"
+    android:paddingTop="@dimen/padding_5dp">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/audio_settings_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_15dp"
+        android:text="@string/audio_setting_name"
+        android:textAppearance="@style/TextAppearance.VisualMusic.TitleLarge"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/audio_settings_btn"
+        style="@style/Widget.VisualMusic.Button.Elevated"
+        android:layout_width="@dimen/width_90dp"
+        android:layout_height="@dimen/height_70dp"
+        android:layout_marginStart="@dimen/margin_5dp"
+        android:layout_marginTop="@dimen/margin_10dp"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:paddingHorizontal="@dimen/padding_5dp"
+        android:text="@string/audio_setting_btn_text"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/audio_settings_title" />
+
+    <app.visualmusic.common.view.AudioFileInfoView
+        android:id="@+id/audio_file_info"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/height_70dp"
+        android:layout_marginStart="@dimen/margin_10dp"
+        android:layout_marginTop="@dimen/margin_10dp"
+        android:layout_marginEnd="@dimen/margin_5dp"
+        app:audioDurationTextAppearance="@style/TextAppearance.VisualMusic.BodySmall"
+        app:audioNameTextAppearance="@style/TextAppearance.VisualMusic.TitleSmall"
+        app:audioSizeTextAppearance="@style/TextAppearance.VisualMusic.BodySmall"
+        app:layout_constraintLeft_toRightOf="@id/audio_settings_btn"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/audio_settings_title" />
+
+    <app.visualmusic.common.view.GenerationSettingView
+        android:id="@+id/genres_setting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_20dp"
+        app:btnText="@string/default_setting_btn_text"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/audio_file_info"
+        app:settingName="@string/genres_setting_name">
+
+        <HorizontalScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/genres_chips"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingEnd="@dimen/padding_5dp"
+                app:singleLine="true"
+                tools:ignore="RtlSymmetry">
+
+                <com.google.android.material.chip.Chip
+                    style="@style/Widget.Material3.Chip.Input"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/empty_genres_settings_chip_text_1"
+                    app:closeIconEnabled="false" />
+
+                <com.google.android.material.chip.Chip
+                    style="@style/Widget.Material3.Chip.Input"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/empty_genres_settings_chip_text_2"
+                    app:closeIconEnabled="false" />
+
+                <com.google.android.material.chip.Chip
+                    style="@style/Widget.Material3.Chip.Input"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/empty_genres_settings_chip_text_3"
+                    app:closeIconEnabled="false" />
+
+            </com.google.android.material.chip.ChipGroup>
+
+        </HorizontalScrollView>
+
+    </app.visualmusic.common.view.GenerationSettingView>
+
+    <app.visualmusic.common.view.GenerationSettingView
+        android:id="@+id/mood_setting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_20dp"
+        app:btnText="@string/default_setting_btn_text"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/genres_setting"
+        app:settingName="@string/mood_setting_name">
+
+        <com.google.android.material.chip.Chip
+            style="@style/Widget.Material3.Chip.Input"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/empty_mood_settings_chip_text"
+            app:closeIconEnabled="false" />
+
+    </app.visualmusic.common.view.GenerationSettingView>
+
+    <app.visualmusic.common.view.GenerationSettingView
+        android:id="@+id/style_setting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_20dp"
+        app:btnText="@string/default_setting_btn_text"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mood_setting"
+        app:settingName="@string/style_setting_name">
+
+        <com.google.android.material.chip.Chip
+            style="@style/Widget.Material3.Chip.Input"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/empty_style_settings_chip_text"
+            app:closeIconEnabled="false" />
+
+    </app.visualmusic.common.view.GenerationSettingView>
+
+    <app.visualmusic.common.view.GenerationSettingView
+        android:id="@+id/text_setting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_20dp"
+        app:btnText="@string/default_setting_btn_text"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/style_setting"
+        app:settingName="@string/text_setting_name">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_70dp"
+            android:layout_marginEnd="@dimen/padding_5dp">
+
+            <TextView
+                style="@style/TextAppearance.VisualMusic.BodyMedium"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:ellipsize="end"
+                android:maxLines="3"
+                android:paddingHorizontal="@dimen/padding_8dp"
+                android:paddingVertical="@dimen/padding_5dp"
+                android:gravity="center_vertical"
+                android:text="@string/empty_text_settings_chip_text"
+                android:textColor="@color/md_theme_onSurfaceVariant" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </app.visualmusic.common.view.GenerationSettingView>
+
+    <com.google.android.material.button.MaterialButton
+        style="@style/Widget.VisualMusic.Button"
+        android:layout_width="@dimen/width_300dp"
+        android:layout_height="@dimen/height_60dp"
+        android:layout_marginBottom="@dimen/margin_25dp"
+        android:text="@string/generate_btn"
+        android:enabled="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

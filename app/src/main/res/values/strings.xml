@@ -67,4 +67,23 @@
     <!--  Generation Setting View  -->
     <string name="auto_setting_status">Автоматически</string>
     <string name="not_auto_setting_status">Не автоматически</string>
+
+
+    <!--  Detailed Generation Screen  -->
+    <string name="audio_setting_name">Аудио</string>
+    <string name="genres_setting_name">Жанры</string>
+    <string name="mood_setting_name">Настроение</string>
+    <string name="style_setting_name">Стиль</string>
+    <string name="text_setting_name">Текст</string>
+
+    <string name="audio_setting_btn_text">Выбрать</string>
+    <string name="audio_delete_setting_btn_text">Удалить</string>
+    <string name="default_setting_btn_text">Изменить</string>
+
+    <string name="empty_genres_settings_chip_text_1">Жанры</string>
+    <string name="empty_genres_settings_chip_text_2">не</string>
+    <string name="empty_genres_settings_chip_text_3">выбраны</string>
+    <string name="empty_mood_settings_chip_text">Настроение не выбрано</string>
+    <string name="empty_style_settings_chip_text">Стиль не выбран</string>
+    <string name="empty_text_settings_chip_text">Текст не указан</string>
 </resources>

@@ -13,6 +13,7 @@
 
     <!--  Padding  -->
     <dimen name="padding_5dp">5dp</dimen>
+    <dimen name="padding_8dp">8dp</dimen>
 
     <!--  Corner Radius  -->
     <dimen name="corner_0dp">0dp</dimen>
@@ -34,6 +35,7 @@
     <dimen name="height_50dp">50dp</dimen>
     <dimen name="height_45dp">45dp</dimen>
     <dimen name="height_30dp">30dp</dimen>
+    <dimen name="height_48dp">48dp</dimen>
 
     <!--  Main Screen Vinyl Record  -->
     <dimen name="vinyl_record_size">350dp</dimen>
