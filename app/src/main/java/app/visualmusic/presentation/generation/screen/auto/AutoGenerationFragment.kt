@@ -1,4 +1,4 @@
-package app.visualmusic.presentation.generation.screen
+package app.visualmusic.presentation.generation.screen.auto
 
 import android.os.Bundle
 import android.view.LayoutInflater
