@@ -29,8 +29,13 @@ class MainFragment : Fragment() {
 
 
     private fun setupBtnListeners() {
-        binding.generateBtn.setOnClickListener {
-            findNavController().navigate(R.id.action_mainScreen_to_generationActivity)
+        with(binding) {
+            generateBtn.setOnClickListener {
+                findNavController().navigate(R.id.action_mainScreen_to_generationActivity)
+            }
+            startAuthorizationBtn.setOnClickListener {
+                findNavController().navigate(R.id.action_mainScreen_to_authorizationActivity)
+            }
         }
     }
 }

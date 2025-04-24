@@ -133,7 +133,7 @@
                     android:layout_width="@dimen/width_280dp"
                     android:layout_height="@dimen/height_50dp"
                     android:alpha="@dimen/alpha_80"
-                    android:text="@string/subscribe_btn"
+                    android:text="@string/subscribe_btn_text"
                     app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintRight_toRightOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/subscription_status_text" />
@@ -142,7 +142,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:alpha="@dimen/alpha_80"
-                    android:visibility="invisible"
+                    android:visibility="gone"
                     app:layout_constraintBottom_toBottomOf="@id/subscribe_btn"
                     app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintRight_toRightOf="parent">
@@ -177,14 +177,26 @@
 
                 </LinearLayout>
 
-
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/generate_btn"
                     style="@style/Widget.VisualMusic.Button"
                     android:layout_width="@dimen/width_300dp"
                     android:layout_height="@dimen/height_70dp"
                     android:layout_marginTop="@dimen/margin_10dp"
-                    android:text="@string/generation_btn"
+                    android:text="@string/generation_btn_text"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/subscribe_btn" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/start_authorization_btn"
+                    style="@style/Widget.VisualMusic.Button"
+                    android:layout_width="@dimen/width_300dp"
+                    android:layout_height="@dimen/height_70dp"
+                    android:layout_marginTop="@dimen/margin_10dp"
+                    android:visibility="gone"
+                    android:text="@string/start_authorization_btn_text"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintRight_toRightOf="parent"

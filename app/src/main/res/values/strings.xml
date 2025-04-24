@@ -35,9 +35,13 @@
     <string name="with_subscription_text">
         Подписка активна\nСпасибо, что\nподдерживаете нас
     </string>
+    <string name="not_authorized_text">
+        Упс, выяснилось,\nчто вы не авторизированы\nИсправим это?
+    </string>
 
-    <string name="generation_btn">Генерация</string>
-    <string name="subscribe_btn">Оформить подписку</string>
+    <string name="generation_btn_text">Генерация</string>
+    <string name="start_authorization_btn_text">Авторизироваться</string>
+    <string name="subscribe_btn_text">Оформить подписку</string>
 
     <string name="example_subscription_start_date">20 февраля 2025</string>
     <string name="example_subscription_end_date">6 июня 2025</string>
