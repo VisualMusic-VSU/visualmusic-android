@@ -1,4 +1,4 @@
-package app.visualmusic.presentation.auth
+package app.visualmusic.presentation.reg
 
 import android.content.Intent
 import android.os.Bundle
@@ -9,17 +9,16 @@ import androidx.core.view.WindowInsetsCompat.Type.statusBars
 import app.visualmusic.common.ui.edgeToEdge
 import app.visualmusic.common.ui.marginTo
 import app.visualmusic.common.ui.paddingBy
-import app.visualmusic.databinding.ActivityAuthorizationBinding
-import app.visualmusic.presentation.main.MainActivity
-import app.visualmusic.presentation.reg.RegistrationActivity
+import app.visualmusic.databinding.ActivityRegistrationBinding
+import app.visualmusic.presentation.auth.AuthorizationActivity
 
-class AuthorizationActivity : AppCompatActivity() {
-    private lateinit var binding: ActivityAuthorizationBinding
+class RegistrationActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityRegistrationBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        binding = ActivityAuthorizationBinding.inflate(layoutInflater)
+        binding = ActivityRegistrationBinding.inflate(layoutInflater)
         setupEdgeToEdge()
         setContentView(binding.root)
 
@@ -29,26 +28,22 @@ class AuthorizationActivity : AppCompatActivity() {
     private fun setupEdgeToEdge() {
         edgeToEdge {
             binding.root paddingBy statusBars() + navigationBars()
-            binding.startRegistrationBtn marginTo ime()
+            binding.goBackBtn marginTo ime()
         }
     }
 
     private fun setupBtnListeners() {
         with(binding) {
-            loginBtn.setOnClickListener {
-                startMainActivity()
+            goBackBtn.setOnClickListener {
+                onBackPressedDispatcher.onBackPressed()
             }
-            startRegistrationBtn.setOnClickListener {
-                startRegistrationActivity()
+            createAccountBtn.setOnClickListener {
+                startAuthorizationActivity()
             }
         }
     }
 
-    private fun startMainActivity() {
-        startActivity(Intent(this, MainActivity::class.java))
-    }
-
-    private fun startRegistrationActivity() {
-        startActivity(Intent(this, RegistrationActivity::class.java))
+    private fun startAuthorizationActivity() {
+        startActivity(Intent(this, AuthorizationActivity::class.java))
     }
 }

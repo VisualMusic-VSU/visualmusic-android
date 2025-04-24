@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/md_theme_surfaceContainerLowest">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        style="@style/Widget.VisualMusic.Image.AppLauncher"
+        android:layout_width="@dimen/width_300dp"
+        android:layout_height="@dimen/height_300dp"
+        android:layout_marginBottom="@dimen/margin_45dp"
+        android:src="@drawable/app_launcher"
+        app:layout_constraintBottom_toTopOf="@id/nickname_text_input_layout"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/nickname_text_input_layout"
+        style="@style/Widget.VisualMusic.TextInputLayout"
+        android:layout_width="@dimen/width_300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_5dp"
+        app:errorEnabled="true"
+        app:layout_constraintBottom_toTopOf="@id/email_text_input_layout"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/nickname_text_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/nickname_text_field_hint"
+            android:inputType="textWebEmailAddress" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/email_text_input_layout"
+        style="@style/Widget.VisualMusic.TextInputLayout"
+        android:layout_width="@dimen/width_300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_5dp"
+        app:errorEnabled="true"
+        app:layout_constraintBottom_toTopOf="@id/password_text_input_layout"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/email_text_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/email_text_field_hint"
+            android:inputType="textWebEmailAddress" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/password_text_input_layout"
+        style="@style/Widget.VisualMusic.TextInputLayout"
+        android:layout_width="@dimen/width_300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_15dp"
+        app:endIconMode="password_toggle"
+        app:errorEnabled="true"
+        app:layout_constraintBottom_toTopOf="@id/create_account_btn"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/password_text_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/password_text_field_hint"
+            android:inputType="textPassword" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/create_account_btn"
+        style="@style/Widget.VisualMusic.Button"
+        android:layout_width="@dimen/width_300dp"
+        android:layout_height="@dimen/height_50dp"
+        android:layout_marginBottom="@dimen/margin_10dp"
+        android:text="@string/create_account_btn_text"
+        app:layout_constraintBottom_toTopOf="@id/go_back_btn"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/go_back_btn"
+        style="@style/Widget.VisualMusic.Button.Outlined"
+        android:layout_width="@dimen/width_300dp"
+        android:layout_height="@dimen/height_50dp"
+        android:layout_marginBottom="@dimen/margin_90dp"
+        android:text="@string/go_back_btn_text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
