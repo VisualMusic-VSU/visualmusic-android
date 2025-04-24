@@ -1,4 +1,4 @@
-package app.visualmusic.presentation.generation.screen.promt
+package app.visualmusic.presentation.generation.screen.prompt
 
 import android.os.Bundle
 import android.view.LayoutInflater
