@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_mainScreen_to_generationActivity"
             app:destination="@id/generationActivity" />
+        <action
+            android:id="@+id/action_mainScreen_to_authorizationActivity"
+            app:destination="@id/authorizationActivity" />
     </fragment>
     <fragment
         android:id="@+id/collectionScreen"
@@ -28,4 +31,8 @@
         android:id="@+id/generationActivity"
         android:name="app.visualmusic.presentation.generation.GenerationActivity"
         android:label="GenerationActivity" />
+    <activity
+        android:id="@+id/authorizationActivity"
+        android:name="app.visualmusic.presentation.auth.AuthorizationActivity"
+        android:label="AuthorizationActivity" />
 </navigation>

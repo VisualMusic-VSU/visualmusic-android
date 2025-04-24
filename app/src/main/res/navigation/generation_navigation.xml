@@ -6,6 +6,6 @@
 
     <fragment
         android:id="@+id/autoGenerationFragment"
-        android:name="app.visualmusic.presentation.generation.screen.AutoGenerationFragment"
+        android:name="app.visualmusic.presentation.generation.screen.auto.AutoGenerationFragment"
         android:label="AutoGenerationFragment" />
 </navigation>
