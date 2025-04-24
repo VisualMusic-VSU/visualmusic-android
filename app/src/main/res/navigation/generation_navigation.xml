@@ -2,10 +2,18 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/generation_navigation"
-    app:startDestination="@id/autoGenerationFragment">
+    app:startDestination="@id/autoGenerationScreen">
 
     <fragment
-        android:id="@+id/autoGenerationFragment"
+        android:id="@+id/autoGenerationScreen"
         android:name="app.visualmusic.presentation.generation.screen.auto.AutoGenerationFragment"
         android:label="AutoGenerationFragment" />
+    <fragment
+        android:id="@+id/promptGenerationScreen"
+        android:name="app.visualmusic.presentation.generation.screen.prompt.PromptGenerationScreen"
+        android:label="PromptGenerationScreen" />
+    <fragment
+        android:id="@+id/detailedGenerationScreen"
+        android:name="app.visualmusic.presentation.generation.screen.detail.DetailedGenerationFragment"
+        android:label="DetailedGenerationFragment" />
 </navigation>
