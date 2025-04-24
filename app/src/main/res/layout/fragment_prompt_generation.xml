@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/md_theme_surfaceContainerLowest">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/audio_upload_state"
+        style="@style/TextAppearance.VisualMusic.TitleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_60dp"
+        android:paddingBottom="@dimen/margin_10dp"
+        android:text="@string/input_prompt_text"
+        android:textAllCaps="true"
+        android:textColor="@color/md_theme_onSurface"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/prompt_text_input_layout"
+        style="@style/Widget.VisualMusic.TextInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="@dimen/margin_15dp"
+        android:layout_marginTop="@dimen/margin_40dp"
+        android:layout_marginBottom="@dimen/margin_5dp"
+        app:boxBackgroundMode="none"
+        app:hintEnabled="false"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/audio_upload_state">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/prompt_text_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="top|start"
+            android:hint="@string/input_prompt_text_field_hint"
+            android:inputType="textImeMultiLine|textMultiLine"
+            android:paddingVertical="10dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/num_of_char_text"
+        style="@style/TextAppearance.Material3.BodyMedium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin_20dp"
+        android:alpha="@dimen/alpha_65"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/prompt_text_input_layout" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/generate_btn"
+        style="@style/Widget.VisualMusic.Button"
+        android:layout_width="@dimen/width_300dp"
+        android:layout_height="@dimen/height_60dp"
+        android:layout_marginBottom="@dimen/margin_25dp"
+        android:text="@string/generate_btn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
