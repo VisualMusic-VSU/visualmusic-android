@@ -1,5 +1,6 @@
 package app.visualmusic.presentation.reg
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.WindowInsetsCompat.Type.ime
@@ -9,6 +10,7 @@ import app.visualmusic.common.ui.edgeToEdge
 import app.visualmusic.common.ui.marginTo
 import app.visualmusic.common.ui.paddingBy
 import app.visualmusic.databinding.ActivityRegistrationBinding
+import app.visualmusic.presentation.auth.AuthorizationActivity
 
 class RegistrationActivity : AppCompatActivity() {
     private lateinit var binding: ActivityRegistrationBinding
@@ -19,6 +21,8 @@ class RegistrationActivity : AppCompatActivity() {
         binding = ActivityRegistrationBinding.inflate(layoutInflater)
         setupEdgeToEdge()
         setContentView(binding.root)
+
+        setupBtnListeners()
     }
 
     private fun setupEdgeToEdge() {
@@ -26,5 +30,20 @@ class RegistrationActivity : AppCompatActivity() {
             binding.root paddingBy statusBars() + navigationBars()
             binding.goBackBtn marginTo ime()
         }
+    }
+
+    private fun setupBtnListeners() {
+        with(binding) {
+            goBackBtn.setOnClickListener {
+                onBackPressedDispatcher.onBackPressed()
+            }
+            createAccountBtn.setOnClickListener {
+                startAuthorizationActivity()
+            }
+        }
+    }
+
+    private fun startAuthorizationActivity() {
+        startActivity(Intent(this, AuthorizationActivity::class.java))
     }
 }
