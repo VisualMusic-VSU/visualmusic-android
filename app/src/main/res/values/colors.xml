@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!--  VK OAuth  -->
+    <color name="oauth_vk_primary">#0056c4</color>
+    <color name="oauth_vk_onPrimary">#ffffff</color>
+    <color name="oauth_vk_rippleColor">#29FFFFFF</color>
+
     <!--  Main Screen Gradient  -->
     <color name="main_screen_start_color">@color/md_theme_surfaceContainerLowest</color>
     <color name="main_screen_center_color">#F2F2F2</color>

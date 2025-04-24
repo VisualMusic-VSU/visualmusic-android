@@ -8,7 +8,9 @@
     <dimen name="margin_25dp">25dp</dimen>
     <dimen name="margin_30dp">30dp</dimen>
     <dimen name="margin_40dp">40dp</dimen>
+    <dimen name="margin_45dp">45dp</dimen>
     <dimen name="margin_60dp">60dp</dimen>
+    <dimen name="margin_90dp">90dp</dimen>
 
 
     <!--  Padding  -->
@@ -17,6 +19,7 @@
 
     <!--  Corner Radius  -->
     <dimen name="corner_0dp">0dp</dimen>
+    <dimen name="corner_10dp">10dp</dimen>
     <dimen name="corner_15dp">15dp</dimen>
     <dimen name="corner_40dp">40dp</dimen>
 
@@ -36,6 +39,7 @@
     <dimen name="height_45dp">45dp</dimen>
     <dimen name="height_30dp">30dp</dimen>
     <dimen name="height_48dp">48dp</dimen>
+    <dimen name="height_300dp">300dp</dimen>
 
     <!--  Main Screen Vinyl Record  -->
     <dimen name="vinyl_record_size">350dp</dimen>

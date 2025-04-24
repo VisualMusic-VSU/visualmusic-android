@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/md_theme_surfaceContainerLowest">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        style="@style/Widget.VisualMusic.Image.AppLauncher"
+        android:layout_width="@dimen/width_300dp"
+        android:layout_height="@dimen/height_300dp"
+        android:layout_marginBottom="@dimen/margin_45dp"
+        android:src="@drawable/app_launcher"
+        app:layout_constraintBottom_toTopOf="@id/vk_login_btn"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/vk_login_btn"
+        style="@style/Widget.VisualMusic.Button.OAuth.VK"
+        android:layout_width="@dimen/width_300dp"
+        android:layout_height="@dimen/height_50dp"
+        android:layout_marginBottom="@dimen/margin_10dp"
+        android:text="@string/vk_login_btn_text"
+        app:icon="@drawable/ic_vk"
+        app:iconGravity="start"
+        app:iconPadding="-13dp"
+        app:layout_constraintBottom_toTopOf="@id/and_text_view"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/and_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_5dp"
+        android:text="@string/and_text_label"
+        android:textAllCaps="true"
+        app:layout_constraintBottom_toTopOf="@id/email_text_input_layout"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/email_text_input_layout"
+        style="@style/Widget.VisualMusic.TextInputLayout"
+        android:layout_width="@dimen/width_300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_5dp"
+        app:errorEnabled="true"
+        app:layout_constraintBottom_toTopOf="@id/password_text_input_layout"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/email_text_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/email_text_field_hint"
+            android:inputType="textWebEmailAddress" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/password_text_input_layout"
+        style="@style/Widget.VisualMusic.TextInputLayout"
+        android:layout_width="@dimen/width_300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_15dp"
+        app:endIconMode="password_toggle"
+        app:errorEnabled="true"
+        app:layout_constraintBottom_toTopOf="@id/login_btn"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/password_text_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/password_text_field_hint"
+            android:inputType="textPassword" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/login_btn"
+        style="@style/Widget.VisualMusic.Button"
+        android:layout_width="@dimen/width_300dp"
+        android:layout_height="@dimen/height_50dp"
+        android:layout_marginBottom="@dimen/margin_10dp"
+        android:text="@string/login_btn_text"
+        app:layout_constraintBottom_toTopOf="@id/start_registration_btn"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_editor_absoluteY="367dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/start_registration_btn"
+        style="@style/Widget.VisualMusic.Button.Outlined"
+        android:layout_width="@dimen/width_300dp"
+        android:layout_height="@dimen/height_50dp"
+        android:layout_marginBottom="@dimen/margin_90dp"
+        android:text="@string/start_registration_btn_text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
