@@ -27,6 +27,7 @@
             android:name=".presentation.auth.AuthorizationActivity"
             android:launchMode="singleTask" />
         <activity android:name=".presentation.reg.RegistrationActivity" />
+        <activity android:name=".presentation.cover.CoverActivity" />
     </application>
 
 </manifest>

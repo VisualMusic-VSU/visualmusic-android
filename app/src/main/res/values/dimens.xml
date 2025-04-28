@@ -14,13 +14,17 @@
 
 
     <!--  Padding  -->
+    <dimen name="padding_0dp">0dp</dimen>
+    <dimen name="padding_2dp">2dp</dimen>
     <dimen name="padding_5dp">5dp</dimen>
     <dimen name="padding_8dp">8dp</dimen>
+    <dimen name="padding_10dp">10dp</dimen>
 
     <!--  Corner Radius  -->
     <dimen name="corner_0dp">0dp</dimen>
     <dimen name="corner_10dp">10dp</dimen>
     <dimen name="corner_15dp">15dp</dimen>
+    <dimen name="corner_28dp">28dp</dimen>
     <dimen name="corner_40dp">40dp</dimen>
 
 
@@ -32,8 +36,10 @@
     <dimen name="width_200dp">190dp</dimen>
     <dimen name="width_105dp">105dp</dimen>
     <dimen name="width_90dp">90dp</dimen>
+    <dimen name="width_65dp">65dp</dimen>
 
     <dimen name="height_70dp">70dp</dimen>
+    <dimen name="height_65dp">65dp</dimen>
     <dimen name="height_60dp">60dp</dimen>
     <dimen name="height_50dp">50dp</dimen>
     <dimen name="height_45dp">45dp</dimen>
@@ -49,4 +55,10 @@
     <!--  Alpha  -->
     <dimen name="alpha_65">0.65</dimen>
     <dimen name="alpha_80">0.8</dimen>
+
+    <!--  Elevation  -->
+    <dimen name="elevation_0dp">0dp</dimen>
+
+    <!--  Cover Activity  -->
+    <dimen name="cover_activity_image_size">220dp</dimen>
 </resources>

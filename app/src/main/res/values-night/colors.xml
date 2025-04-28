@@ -1,5 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <!--  Mood  -->
+    <color name="laughter_color">#80F9E2AF</color>
+    <color name="speech_color">#80B4BEFE</color>
+    <color name="crying_color">#8089DCEB</color>
+    <color name="screaming_color">#80EBA0AC</color>
+    <color name="whispering_color">#8094E2D5</color>
+    <color name="aggressive_color">#80F38BA8</color>
+    <color name="intensive_color">#80FAB387</color>
+    <color name="dynamic_color">#80CBA6F7</color>
+    <color name="relaxing_color">#80A6E3A1</color>
+    <color name="energetic_color">#80F2CDCD</color>
+    <color name="dance_color">#8074C7EC</color>
+    <color name="calm_color">#80F5C2E7</color>
+    <color name="harmonius_color">#8089B4FA</color>
+    <color name="neutral_color">#80B4BEFE</color>
+
     <!--  VK OAuth  -->
     <color name="oauth_vk_primary">#afc6ff</color>
     <color name="oauth_vk_onPrimary">#002d6d</color>

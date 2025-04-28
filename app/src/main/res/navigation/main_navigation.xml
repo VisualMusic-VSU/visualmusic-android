@@ -16,6 +16,9 @@
         <action
             android:id="@+id/action_mainScreen_to_authorizationActivity"
             app:destination="@id/authorizationActivity" />
+        <action
+            android:id="@+id/action_mainScreen_to_coverActivity"
+            app:destination="@id/coverActivity" />
     </fragment>
     <fragment
         android:id="@+id/collectionScreen"
@@ -35,4 +38,8 @@
         android:id="@+id/authorizationActivity"
         android:name="app.visualmusic.presentation.auth.AuthorizationActivity"
         android:label="AuthorizationActivity" />
+    <activity
+        android:id="@+id/coverActivity"
+        android:name="app.visualmusic.presentation.cover.CoverActivity"
+        android:label="CoverActivity" />
 </navigation>
