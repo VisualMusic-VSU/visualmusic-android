@@ -1,5 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <!--  Additional  -->
+    <color name="transparent">#00000000</color>
+
+    <!--  Mood  -->
+    <color name="laughter_color">#80DF8E1D</color>
+    <color name="speech_color">#807287FD</color>
+    <color name="crying_color">#8004A5E5</color>
+    <color name="screaming_color">#80E64553</color>
+    <color name="whispering_color">#80179299</color>
+    <color name="aggressive_color">#80D20F39</color>
+    <color name="intensive_color">#80FE640B</color>
+    <color name="dynamic_color">#808839EF</color>
+    <color name="relaxing_color">#8040A02B</color>
+    <color name="energetic_color">#80DD7878</color>
+    <color name="dance_color">#80209FB5</color>
+    <color name="calm_color">#80EA76CB</color>
+    <color name="harmonius_color">#801E66F5</color>
+    <color name="neutral_color">#807287FD</color>
+
+    <!--  Icon Button  -->
+    <color name="icon_btn_rippleColor">#293F2E08</color>
+
     <!--  VK OAuth  -->
     <color name="oauth_vk_primary">#0056c4</color>
     <color name="oauth_vk_onPrimary">#ffffff</color>

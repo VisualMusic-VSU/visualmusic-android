@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <declare-styleable name="AudioFileInfoView">
-        <attr name="audioNameTextAppearance" format="reference"/>
-        <attr name="audioSizeTextAppearance" format="reference"/>
-        <attr name="audioDurationTextAppearance" format="reference"/>
+        <attr name="audioNameTextAppearance" format="reference" />
+        <attr name="audioSizeTextAppearance" format="reference" />
+        <attr name="audioDurationTextAppearance" format="reference" />
     </declare-styleable>
 
     <declare-styleable name="GenerationSettingView">
-        <attr name="settingName" format="string"/>
-        <attr name="btnText" format="string"/>
-        <attr name="bodyHeight" format="dimension"/>
+        <attr name="settingName" format="string" />
+        <attr name="btnText" format="string" />
+        <attr name="bodyHeight" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="GenerationParameterView">
+        <attr name="parameterName" format="string" />
     </declare-styleable>
 </resources>

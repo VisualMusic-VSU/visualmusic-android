@@ -61,6 +61,7 @@
     <!--  Generation Activity  -->
     <string name="select_audio_btn">Выбрать аудио</string>
     <string name="generate_btn">Сгенерировать</string>
+    <string name="generation_activity_title">Генерация</string>
 
 
     <!--  Auto Generation Screen  -->
@@ -110,4 +111,20 @@
     <!--  Prompt Generation Screen  -->
     <string name="input_prompt_text">Введите запрос</string>
     <string name="input_prompt_text_field_hint">Что вы хотите видеть на обложке?</string>
+
+
+    <!--  Cover Activity  -->
+    <string name="mock_cover_name">Название обложки</string>
+
+    <string name="cover_info_text_separator"> ·</string>
+    <string name="mock_additional_info">приватная</string>
+    <string name="mock_created_date">19 марта 2024</string>
+
+    <string name="prompt_parameter_name">19 марта 2024</string>
+
+    <string name="mock_genre_parameter">Бум-бап</string>
+    <string name="mock_mood_parameter">Радостное</string>
+    <string name="mock_style_parameter">Реализм</string>
+    <string name="mock_text_parameter">Закрываю дверь квартиры, отключаю все мобилы\nНедоступна для дебилов, потому что я влюбилась\nВ тебя (а-а), тупого наглеца, от чего же?\nОт чего же?\nВсё потому, что Дора дура, супер дура, Дора дура\nПотому, что Дора дура, супер дура, Дора дура\nПотому, что Дора дура, супер дура, Дора дура\nПотому, что Дора дура, дура, дура (дура, дура...)\nЯ увидела твой взгляд, заострённый на мне\nТы рукою помахал, я помахала в ответ\nТы пошёл ко мне навстречу, это было так глупо\nВедь за спиною моей стояла твоя подруга\nВсё потому, что Дора дура, супер дура, Дора дура\nПотому, что Дора дура, супер дура, Дора дура\nПотому, что Дора дура, супер дура, Дора дура\nПотому, что Дора дура, супер дура, Дора дура\nТы позвал меня на встречу (ой)\nТы позвал меня на встречу\nЯ готовилась весь вечер\nВыбирала, что надеть мне\nИстрепала свои нервы\nПришла, ждала почти два часа\nТы написал Sorry, я проспал \nВсё потому, что Дора дура, супер дура, Дора дура \nПотому, что Дора дура, супер дура, Дора дура \nПотому, что Дора дура, супер дура, Дора дура \nПотому, что Дора дура, супер дура, Дора дура</string>
+    <string name="mock_prompt_parameter">"Абстрактная обложка для музыкального трека в жанре электроника, с яркими неоновыми цветами, геометрическими фигурами и космической атмосферой"</string>
 </resources>
