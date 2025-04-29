@@ -65,26 +65,27 @@
                 android:id="@+id/genres_chips"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:paddingVertical="@dimen/padding_8dp"
                 android:paddingEnd="@dimen/padding_5dp"
                 app:singleLine="true"
                 tools:ignore="RtlSymmetry">
 
                 <com.google.android.material.chip.Chip
-                    style="@style/Widget.Material3.Chip.Input"
+                    style="@style/Widget.VisualMusic.Chip.GenParameter"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/empty_genres_settings_chip_text_1"
                     app:closeIconEnabled="false" />
 
                 <com.google.android.material.chip.Chip
-                    style="@style/Widget.Material3.Chip.Input"
+                    style="@style/Widget.VisualMusic.Chip.GenParameter"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/empty_genres_settings_chip_text_2"
                     app:closeIconEnabled="false" />
 
                 <com.google.android.material.chip.Chip
-                    style="@style/Widget.Material3.Chip.Input"
+                    style="@style/Widget.VisualMusic.Chip.GenParameter"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/empty_genres_settings_chip_text_3"
@@ -108,9 +109,10 @@
         app:settingName="@string/mood_setting_name">
 
         <com.google.android.material.chip.Chip
-            style="@style/Widget.Material3.Chip.Input"
+            style="@style/Widget.VisualMusic.Chip.GenParameter"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/margin_8dp"
             android:text="@string/empty_mood_settings_chip_text"
             app:closeIconEnabled="false" />
 
@@ -128,9 +130,10 @@
         app:settingName="@string/style_setting_name">
 
         <com.google.android.material.chip.Chip
-            style="@style/Widget.Material3.Chip.Input"
+            style="@style/Widget.VisualMusic.Chip.GenParameter"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/margin_8dp"
             android:text="@string/empty_style_settings_chip_text"
             app:closeIconEnabled="false" />
 
@@ -157,10 +160,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:ellipsize="end"
+                android:gravity="center_vertical"
                 android:maxLines="3"
                 android:paddingHorizontal="@dimen/padding_8dp"
                 android:paddingVertical="@dimen/padding_5dp"
-                android:gravity="center_vertical"
                 android:text="@string/empty_text_settings_chip_text"
                 android:textColor="@color/md_theme_onSurfaceVariant" />
 
@@ -173,8 +176,8 @@
         android:layout_width="@dimen/width_300dp"
         android:layout_height="@dimen/height_60dp"
         android:layout_marginBottom="@dimen/margin_25dp"
-        android:text="@string/generate_btn"
         android:enabled="false"
+        android:text="@string/generate_btn"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent" />
