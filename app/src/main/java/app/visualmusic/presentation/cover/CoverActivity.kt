@@ -8,8 +8,8 @@ import androidx.core.content.ContextCompat
 import androidx.core.view.WindowInsetsCompat.Type.navigationBars
 import androidx.core.view.WindowInsetsCompat.Type.statusBars
 import app.visualmusic.R
-import app.visualmusic.common.ui.edgeToEdge
-import app.visualmusic.common.ui.paddingBy
+import app.visualmusic.common.util.edgeToEdge
+import app.visualmusic.common.util.paddingBy
 import app.visualmusic.common.util.getDensity
 import app.visualmusic.common.util.getWidthPx
 import app.visualmusic.databinding.ActivityCoverBinding

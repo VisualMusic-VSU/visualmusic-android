@@ -1,4 +1,4 @@
-package app.visualmusic.common.ui
+package app.visualmusic.common.util
 
 import android.app.Activity
 import android.graphics.Color

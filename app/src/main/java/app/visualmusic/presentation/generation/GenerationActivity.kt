@@ -1,6 +1,5 @@
 package app.visualmusic.presentation.generation
 
-import android.graphics.Color
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.WindowInsetsCompat.Type.ime
@@ -9,13 +8,9 @@ import androidx.core.view.WindowInsetsCompat.Type.statusBars
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import app.visualmusic.R
-import app.visualmusic.common.ui.edgeToEdge
-import app.visualmusic.common.ui.paddingBy
+import app.visualmusic.common.util.edgeToEdge
+import app.visualmusic.common.util.paddingBy
 import app.visualmusic.databinding.ActivityGenerationBinding
-import com.google.android.material.appbar.AppBarLayout
-import com.google.android.material.appbar.AppBarLayout.OnOffsetChangedListener
-import kotlin.math.abs
-
 
 class GenerationActivity : AppCompatActivity() {
     private lateinit var binding: ActivityGenerationBinding
