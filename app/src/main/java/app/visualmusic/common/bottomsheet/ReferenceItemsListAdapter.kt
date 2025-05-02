@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import app.visualmusic.common.bottomsheet.ReferenceItemsListAdapter.ReferenceItemVH
-import app.visualmusic.core.model.ReferenceItem
+import app.visualmusic.core.model.cover.ReferenceItem
 import app.visualmusic.databinding.ItemReferenceItemBinding
 
 class ReferenceItemsListAdapter(

@@ -1,6 +1,6 @@
-package app.visualmusic.core.model
+package app.visualmusic.core.model.cover
 
-data class Style(
+data class MoodDto(
     override val id: Long,
     override val name: String
 ) : ReferenceItem()
