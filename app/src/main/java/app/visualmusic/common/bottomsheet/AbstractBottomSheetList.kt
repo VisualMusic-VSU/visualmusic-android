@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import app.visualmusic.R
 import app.visualmusic.common.util.setBottomSheetHeight
-import app.visualmusic.core.model.ReferenceItem
+import app.visualmusic.core.model.cover.ReferenceItem
 import app.visualmusic.databinding.BottomSheetListBinding
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
