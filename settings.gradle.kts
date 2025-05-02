@@ -21,3 +21,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "VisualMusic"
 include(":app")
+include(":core")
