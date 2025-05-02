@@ -5,8 +5,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.WindowInsetsCompat.Type.statusBars
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
-import app.visualmusic.common.ui.edgeToEdge
-import app.visualmusic.common.ui.paddingBy
+import app.visualmusic.common.util.edgeToEdge
+import app.visualmusic.common.util.paddingBy
 import app.visualmusic.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {

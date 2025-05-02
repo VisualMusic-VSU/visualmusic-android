@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.FrameLayout
 import app.visualmusic.R
+import app.visualmusic.common.util.setEnabledDeep
 import app.visualmusic.databinding.ViewGenerationSettingBinding
 
 class GenerationSettingView @JvmOverloads constructor(
@@ -38,6 +39,47 @@ class GenerationSettingView @JvmOverloads constructor(
             }
 
             a.recycle()
+        }
+    }
+
+    override fun onFinishInflate() {
+        super.onFinishInflate()
+
+        setupCheckedChangeStatusChipClick()
+    }
+
+    private fun setupCheckedChangeStatusChipClick() {
+        val statusChip = binding.statusChip
+
+        statusChip.setOnCheckedChangeListener { _, isChecked ->
+            if (isChecked) {
+                toggleElementsEnabledState(false)
+                statusChip.text = context.getString(R.string.auto_setting_status)
+            } else {
+                toggleElementsEnabledState(true)
+                statusChip.text = context.getString(R.string.not_auto_setting_status)
+            }
+        }
+    }
+
+    private fun toggleElementsEnabledState(isEnabled: Boolean) {
+        binding.apply {
+            settingsBtn.isEnabled = isEnabled
+            slotContainer.setEnabledDeep(isEnabled)
+        }
+    }
+
+    fun changeStatus(isAuto: Boolean) {
+        val statusChip = binding.statusChip
+
+        if(statusChip.isChecked != isAuto) {
+            statusChip.performClick()
+        }
+    }
+
+    fun onSettingBtnClick(action: () -> Unit) {
+        binding.settingsBtn.setOnClickListener {
+            action()
         }
     }
 

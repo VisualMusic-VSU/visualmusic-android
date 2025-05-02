@@ -50,6 +50,7 @@
         android:layout_width="@dimen/width_300dp"
         android:layout_height="@dimen/height_60dp"
         android:layout_marginBottom="@dimen/margin_25dp"
+        android:enabled="false"
         android:text="@string/generate_btn"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"

@@ -2,6 +2,7 @@
 <resources>
     <!--  Margin  -->
     <dimen name="margin_5dp">5dp</dimen>
+    <dimen name="margin_8dp">8dp</dimen>
     <dimen name="margin_10dp">10dp</dimen>
     <dimen name="margin_15dp">15dp</dimen>
     <dimen name="margin_20dp">20dp</dimen>
@@ -61,4 +62,8 @@
 
     <!--  Cover Activity  -->
     <dimen name="cover_activity_image_size">220dp</dimen>
+
+    <!--  Bottom Sheet  -->
+    <dimen name="list_bottom_sheet_max_height">0.6</dimen>
+    <dimen name="text_editor_bottom_sheet_max_height">0.85</dimen>
 </resources>

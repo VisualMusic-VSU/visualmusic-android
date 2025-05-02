@@ -6,9 +6,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.WindowInsetsCompat.Type.ime
 import androidx.core.view.WindowInsetsCompat.Type.navigationBars
 import androidx.core.view.WindowInsetsCompat.Type.statusBars
-import app.visualmusic.common.ui.edgeToEdge
-import app.visualmusic.common.ui.marginTo
-import app.visualmusic.common.ui.paddingBy
+import app.visualmusic.common.util.edgeToEdge
+import app.visualmusic.common.util.marginTo
+import app.visualmusic.common.util.paddingBy
 import app.visualmusic.databinding.ActivityRegistrationBinding
 import app.visualmusic.presentation.auth.AuthorizationActivity
 
