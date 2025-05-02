@@ -62,4 +62,8 @@
 
     <!--  Cover Activity  -->
     <dimen name="cover_activity_image_size">220dp</dimen>
+
+    <!--  Bottom Sheet  -->
+    <dimen name="list_bottom_sheet_max_height">0.6</dimen>
+    <dimen name="text_editor_bottom_sheet_max_height">0.85</dimen>
 </resources>

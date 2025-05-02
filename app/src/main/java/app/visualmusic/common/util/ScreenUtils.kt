@@ -11,5 +11,7 @@ private fun getWindowMetrics(activity: Activity): WindowMetrics {
 
 fun getWidthPx(activity: Activity): Int = getWindowMetrics(activity).bounds.width()
 
+fun getScreenHeightPx(activity: Activity): Int = getWindowMetrics(activity).bounds.height()
+
 @RequiresApi(Build.VERSION_CODES.UPSIDE_DOWN_CAKE)
 fun getDensity(activity: Activity): Float = getWindowMetrics(activity).density
