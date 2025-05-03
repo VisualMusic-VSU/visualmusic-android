@@ -1,7 +1,9 @@
 package app.visualmusic.di.hilt
 
 import app.visualmusic.core.repository.CoverRepository
+import app.visualmusic.core.repository.GenerationRepository
 import app.visualmusic.core.service.CoverService
+import app.visualmusic.core.service.GenerationService
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -17,4 +19,11 @@ class CoreModule {
         coverRepository: CoverRepository
     ) : CoverService =
         CoverService(coverRepository)
+
+    @Provides
+    @Singleton
+    fun provideGenerationService(
+        generationRepository: GenerationRepository
+    ) : GenerationService =
+        GenerationService(generationRepository)
 }
