@@ -11,7 +11,9 @@ import app.visualmusic.R
 import app.visualmusic.common.util.edgeToEdge
 import app.visualmusic.common.util.paddingBy
 import app.visualmusic.databinding.ActivityGenerationBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class GenerationActivity : AppCompatActivity() {
     private lateinit var binding: ActivityGenerationBinding
     private lateinit var navController: NavController

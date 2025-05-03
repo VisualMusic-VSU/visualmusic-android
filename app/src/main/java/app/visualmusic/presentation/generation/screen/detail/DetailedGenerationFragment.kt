@@ -12,7 +12,9 @@ import app.visualmusic.core.model.cover.MoodDto
 import app.visualmusic.core.model.cover.ReferenceItem
 import app.visualmusic.core.model.cover.StyleDto
 import app.visualmusic.databinding.FragmentDetailedGenerationBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class DetailedGenerationFragment : Fragment() {
     private lateinit var binding: FragmentDetailedGenerationBinding
 

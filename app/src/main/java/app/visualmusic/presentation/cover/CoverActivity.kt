@@ -15,8 +15,10 @@ import app.visualmusic.common.util.getWidthPx
 import app.visualmusic.databinding.ActivityCoverBinding
 import com.google.android.material.appbar.AppBarLayout
 import com.google.android.material.appbar.AppBarLayout.OnOffsetChangedListener
+import dagger.hilt.android.AndroidEntryPoint
 import kotlin.math.abs
 
+@AndroidEntryPoint
 class CoverActivity : AppCompatActivity() {
     private lateinit var binding: ActivityCoverBinding
 
