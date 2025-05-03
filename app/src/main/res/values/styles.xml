@@ -85,6 +85,14 @@
         <item name="cornerSize">@dimen/corner_40dp</item>
     </style>
 
+    <style name="Widget.VisualMusic.Image.Cover" parent="Widget.MaterialComponents.ShapeableImageView">
+        <item name="shapeAppearance">@style/ShapeAppearance.VisualMusic.Image.Corner_12dp</item>
+    </style>
+
+    <style name="ShapeAppearance.VisualMusic.Image.Corner_12dp" parent="ShapeAppearance.Material3.Corner.None">
+        <item name="cornerSize">@dimen/corner_12dp</item>
+    </style>
+
     <!--  Cover Activity Card View  -->
     <style name="Widget.VisualMusic.CardView.CoverActivity" parent="Widget.Material3.CardView.Outlined">
         <item name="shapeAppearanceOverlay">
