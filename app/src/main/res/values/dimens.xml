@@ -57,8 +57,11 @@
     <dimen name="bottom_margin">-195dp</dimen>
 
     <!--  Alpha  -->
+    <dimen name="alpha_12">0.12</dimen>
+    <dimen name="alpha_38">0.38</dimen>
     <dimen name="alpha_65">0.65</dimen>
     <dimen name="alpha_80">0.8</dimen>
+    <dimen name="alpha_100">1</dimen>
 
     <!--  Elevation  -->
     <dimen name="elevation_0dp">0dp</dimen>

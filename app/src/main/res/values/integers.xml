@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="min_cover_name_length">4</integer>
+    <integer name="max_cover_name_length">128</integer>
+</resources>

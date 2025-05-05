@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!--  Additional  -->
+    <color name="opacity_12">#CAC4D0</color>
 
     <!--  Mood  -->
     <color name="laughter_color">#80F9E2AF</color>
