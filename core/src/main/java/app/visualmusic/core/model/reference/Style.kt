@@ -1,6 +1,6 @@
-package app.visualmusic.core.model.cover
+package app.visualmusic.core.model.reference
 
-data class GenreDto(
+data class Style(
     override val id: Long,
     override val name: String
 ) : ReferenceItem()
