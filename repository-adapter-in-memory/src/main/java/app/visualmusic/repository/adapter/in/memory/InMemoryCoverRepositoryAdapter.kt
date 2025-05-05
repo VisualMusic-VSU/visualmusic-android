@@ -2,6 +2,9 @@ package app.visualmusic.repository.adapter.`in`.memory
 
 import app.visualmusic.core.model.cover.CoverGroupDetailDto
 import app.visualmusic.core.model.cover.CoverGroupItemDto
+import app.visualmusic.core.model.reference.Genre
+import app.visualmusic.core.model.reference.Mood
+import app.visualmusic.core.model.reference.Style
 import app.visualmusic.core.repository.CoverRepository
 import app.visualmusic.core.utils.OperationResult
 
@@ -122,5 +125,67 @@ class InMemoryCoverRepositoryAdapter : CoverRepository {
 
     override fun getCoverGroupById(id: Int): OperationResult<List<CoverGroupDetailDto>> {
         return OperationResult.Loading
+    }
+
+    override fun getAllGenres(): List<Genre> {
+        return listOf(
+            Genre(1, "Рэп"),
+            Genre(2, "Трэп"),
+            Genre(3, "Бум-бэп"),
+            Genre(4, "Дрилл"),
+            Genre(5, "Хард-рок"),
+            Genre(6, "Альтернативный рок"),
+            Genre(7, "Метал"),
+            Genre(8, "Хаус"),
+            Genre(9, "Техно"),
+            Genre(10, "Драм-н-бейс"),
+            Genre(11, "Смуз-джаз"),
+            Genre(12, "Бибоп"),
+            Genre(13, "Фьюжн"),
+            Genre(14, "Симфония"),
+            Genre(15, "Оркестровая музыка"),
+            Genre(16, "Камерная музыка")
+        )
+    }
+
+    override fun getAllMoods(): List<Mood> {
+        return listOf(
+            Mood(1, "Весёлое"),
+            Mood(2, "Нейтральное"),
+            Mood(3, "Грустное"),
+            Mood(4, "Яростное"),
+            Mood(5, "Интроспективное"),
+            Mood(6, "Напористое"),
+            Mood(7, "Брутальное"),
+            Mood(8, "Энергичное"),
+            Mood(9, "Успокаивающее"),
+            Mood(10, "Беззаботное"),
+            Mood(11, "Уверенное"),
+            Mood(12, "Танцевальное"),
+            Mood(13, "Замысловатое"),
+            Mood(14, "Величественное")
+        )
+    }
+
+    override fun getAllStyles(): List<Style> {
+        return listOf(
+            Style(1, "Детальное фото"),
+            Style(2, "Малевич"),
+            Style(3, "Студийное фото"),
+            Style(4, "Киберпанк"),
+            Style(5, "Айвазовский"),
+            Style(6, "Картина маслом"),
+            Style(7, "3D рендер"),
+            Style(8, "Портретное фото"),
+            Style(9, "Цифровая живопись"),
+            Style(10, "Мультфильм"),
+            Style(11, "Рисунок карандашом"),
+            Style(12, "Классицизм"),
+            Style(13, "Хохлома"),
+            Style(14, "Пикассо"),
+            Style(15, "Пиксель арт"),
+            Style(16, "Кандинский"),
+            Style(17, "Аниме")
+        )
     }
 }

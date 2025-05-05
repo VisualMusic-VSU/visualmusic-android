@@ -5,22 +5,29 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import app.visualmusic.R
 import app.visualmusic.common.util.setBottomSheetHeight
-import app.visualmusic.core.model.cover.ReferenceItem
+import app.visualmusic.core.model.reference.ReferenceItem
 import app.visualmusic.databinding.BottomSheetListBinding
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.google.android.material.divider.MaterialDividerItemDecoration
+import dagger.hilt.android.AndroidEntryPoint
 
-abstract class AbstractBottomSheetList(
+@AndroidEntryPoint
+abstract class AbstractChoiceBottomSheetList(
     private val title: String,
-    private val isSingleChoice: Boolean
+    private val isSingleChoice: Boolean,
+    private val allItems: List<ReferenceItem>,
+    private val initialCheckedItemIds: Set<Long>
 ) : BottomSheetDialogFragment() {
     protected lateinit var binding: BottomSheetListBinding
 
-    private var pendingItems: List<ReferenceItem>? = null
+    protected val viewModel: ChoiceViewModel by viewModels()
+
+    private lateinit var listAdapter: CheckedReferenceItemsListAdapter
 
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
         val dialog = super.onCreateDialog(savedInstanceState) as BottomSheetDialog
@@ -49,18 +56,18 @@ abstract class AbstractBottomSheetList(
         binding.title.text = title
 
         setupRecycleView()
-        setupBtnListeners()
+        setupCancelBtnListeners()
+        setupObserver()
 
-        pendingItems?.let {
-            (binding.recycleView.adapter as ReferenceItemsListAdapter)
-                .submitList(it)
-        }
+        viewModel.addItems(initialCheckedItemIds)
     }
 
     private fun setupRecycleView() {
+        listAdapter = CheckedReferenceItemsListAdapter(isSingleChoice, ::onItemCheckedChange)
+
         binding.recycleView.apply {
             layoutManager = LinearLayoutManager(context)
-            adapter = ReferenceItemsListAdapter(isSingleChoice)
+            adapter = listAdapter
 
             addItemDecoration(
                 MaterialDividerItemDecoration(context, LinearLayoutManager.VERTICAL).apply {
@@ -70,20 +77,44 @@ abstract class AbstractBottomSheetList(
         }
     }
 
-    private fun setupBtnListeners() {
+    protected abstract fun onItemCheckedChange(itemId: Long, isChecked: Boolean)
+
+    private fun setupCancelBtnListeners() {
         binding.apply {
             cancelBtn.setOnClickListener {
                 dismiss()
             }
-            applyBtn.setOnClickListener {
-                onApplyBtnClick()
-            }
         }
     }
 
-    abstract fun onApplyBtnClick()
+    private fun setupObserver() {
+        viewModel.selectedItemIds.observe(this) {
+            val isEmpty = it.isEmpty()
+            setBtnsVisible(!isEmpty, !isEmpty, isEmpty)
+            submitCheckedReferenceItemsList(it)
+        }
+    }
 
-    fun mockItems(items: List<ReferenceItem>) {
-        pendingItems = items
+    private fun setBtnsVisible(
+        isResetBtnVisible: Boolean,
+        isApplyBtnVisible: Boolean,
+        isCancelBtnVisible: Boolean
+    ) {
+        binding.apply {
+            resetBtn.visibility = if (isResetBtnVisible) View.VISIBLE else View.GONE
+            applyBtn.visibility = if (isApplyBtnVisible) View.VISIBLE else View.GONE
+            cancelBtn.visibility = if (isCancelBtnVisible) View.VISIBLE else View.INVISIBLE
+        }
+    }
+
+    protected fun submitCheckedReferenceItemsList(checkedItemIds: Set<Long>) {
+        val checkedReferenceItems = mutableListOf<CheckedReferenceItem>()
+
+        checkedReferenceItems.addAll(allItems.map { item ->
+            val isChecked = checkedItemIds.contains(item.id)
+            CheckedReferenceItem(item, isChecked)
+        })
+
+        listAdapter.submitList(checkedReferenceItems)
     }
 }

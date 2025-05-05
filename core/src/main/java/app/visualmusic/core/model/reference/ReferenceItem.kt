@@ -1,4 +1,4 @@
-package app.visualmusic.core.model.cover
+package app.visualmusic.core.model.reference
 
 abstract class ReferenceItem {
     abstract val id: Long

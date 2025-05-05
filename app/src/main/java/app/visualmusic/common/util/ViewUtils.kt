@@ -36,3 +36,14 @@ fun setBottomSheetHeight(dialog: Dialog, activity: Activity, heightPercent: Floa
         skipCollapsed = true
     }
 }
+
+fun View.setDebouncedClickListener(delayMillis: Long = 500L, onClick: () -> Unit) {
+    var isClickable = true
+
+    setOnClickListener {
+        if (!isClickable) return@setOnClickListener
+        isClickable = false
+        onClick()
+        postDelayed({ isClickable = true }, delayMillis)
+    }
+}

@@ -53,6 +53,7 @@
 
 
     <!--  Gallery Screen Filters  -->
+    <string name="sort_filter">Упорядочить</string>
     <string name="genres_filter">Жанры</string>
     <string name="mood_filter">Настроение</string>
     <string name="style_filter">Стиль</string>
@@ -131,6 +132,7 @@
 
     <!--  Bottom Sheet Btns  -->
     <string name="cancel_btn_text">Отменить</string>
+    <string name="reset_btn_text">Сбросить</string>
     <string name="apply_btn_text">Применить</string>
 
 

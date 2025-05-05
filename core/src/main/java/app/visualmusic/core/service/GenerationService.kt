@@ -1,8 +1,5 @@
 package app.visualmusic.core.service
 
-import app.visualmusic.core.model.cover.GenreDto
-import app.visualmusic.core.model.cover.MoodDto
-import app.visualmusic.core.model.cover.StyleDto
 import app.visualmusic.core.model.gen.GenParamsDto
 import app.visualmusic.core.model.gen.GenPromptDto
 import app.visualmusic.core.repository.GenerationRepository
@@ -17,17 +14,5 @@ class GenerationService(
 
     fun generateByPrompt(prompt: GenPromptDto): OperationResult<Nothing> {
         return generationRepository.generateByPrompt(prompt)
-    }
-
-    fun getAllGenres(): OperationResult<List<GenreDto>> {
-        return generationRepository.getAllGenres()
-    }
-
-    fun getAllMoods(): OperationResult<List<MoodDto>> {
-        return generationRepository.getAllMoods()
-    }
-
-    fun getAllStyles(): OperationResult<List<StyleDto>> {
-        return generationRepository.getAllStyles()
     }
 }
