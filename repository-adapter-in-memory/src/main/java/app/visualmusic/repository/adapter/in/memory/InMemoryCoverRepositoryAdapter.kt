@@ -57,7 +57,7 @@ class InMemoryCoverRepositoryAdapter : CoverRepository {
                         R.drawable.mock_cover_image_5_1.toString(),
                         R.drawable.mock_cover_image_5_2.toString(),
                         R.drawable.mock_cover_image_5_3.toString(),
-                        )
+                    )
                 ),
                 CoverGroupItemDto(
                     id = 6L,
@@ -115,8 +115,39 @@ class InMemoryCoverRepositoryAdapter : CoverRepository {
         )
     }
 
-    override fun getAllGeneratedCoverGroups(): OperationResult<List<CoverGroupDetailDto>> {
-        return OperationResult.Loading
+    override fun getAllGeneratedCoverGroups(): OperationResult<List<CoverGroupItemDto>> {
+        return OperationResult.Success(
+            listOf(
+                CoverGroupItemDto(
+                    id = 1L,
+                    ownerUsername = null,
+                    title = "Неоновый город",
+                    imageUrls = listOf(
+                        R.drawable.mock_cover_image_2_1.toString(),
+                        R.drawable.mock_cover_image_2_2.toString(),
+                        R.drawable.mock_cover_image_2_3.toString(),
+                        R.drawable.mock_cover_image_2_4.toString(),
+                    )
+                ),
+                CoverGroupItemDto(
+                    id = 2L,
+                    ownerUsername = null,
+                    title = "Обложку к рекламе магазина кроссовок",
+                    imageUrls = listOf(
+                        R.drawable.mock_cover_image_10.toString()
+                    )
+                ),
+                CoverGroupItemDto(
+                    id = 3L,
+                    ownerUsername = null,
+                    title = "Живой город",
+                    imageUrls = listOf(
+                        R.drawable.mock_cover_image_11_1.toString(),
+                        R.drawable.mock_cover_image_11_2.toString(),
+                    )
+                ),
+            )
+        )
     }
 
     override fun getAllSavedCoverGroups(): OperationResult<List<CoverGroupDetailDto>> {

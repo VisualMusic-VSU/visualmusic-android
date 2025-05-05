@@ -1,5 +1,6 @@
 package app.visualmusic.presentation.generation
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.WindowInsetsCompat.Type.ime
@@ -11,6 +12,7 @@ import app.visualmusic.R
 import app.visualmusic.common.util.edgeToEdge
 import app.visualmusic.common.util.paddingBy
 import app.visualmusic.databinding.ActivityGenerationBinding
+import app.visualmusic.presentation.main.MainActivity
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -27,6 +29,7 @@ class GenerationActivity : AppCompatActivity() {
 
         setupNavController()
         setupToggleBtn()
+        setupNavigation()
     }
 
     private fun setupNavController() {
@@ -59,6 +62,13 @@ class GenerationActivity : AppCompatActivity() {
             autoBtnId -> navController.navigate(R.id.autoGenerationScreen)
             detailBtnId -> navController.navigate(R.id.detailedGenerationScreen)
             else -> navController.navigate(R.id.promptGenerationScreen)
+        }
+    }
+
+    private fun setupNavigation() {
+        binding.topAppBar.setNavigationOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
         }
     }
 }

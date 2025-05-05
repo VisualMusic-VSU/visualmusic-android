@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="dots_inactive_color">#40AAAAAA</color>
-    <color name="dots_active_color">#B38C8C8C</color>
+    <color name="dots_inactive_color">#4DE6E6E6</color>
+    <color name="dots_active_color">#B3D2D2D2</color>
 
     <!--  Additional  -->
     <color name="transparent">#00000000</color>

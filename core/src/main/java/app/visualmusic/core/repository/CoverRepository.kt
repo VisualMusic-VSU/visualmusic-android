@@ -10,7 +10,7 @@ import app.visualmusic.core.utils.OperationResult
 interface CoverRepository {
     suspend fun getAllCovers(): OperationResult<List<CoverGroupItemDto>>
 
-    fun getAllGeneratedCoverGroups(): OperationResult<List<CoverGroupDetailDto>>
+    fun getAllGeneratedCoverGroups(): OperationResult<List<CoverGroupItemDto>>
 
     fun getAllSavedCoverGroups(): OperationResult<List<CoverGroupDetailDto>>
 

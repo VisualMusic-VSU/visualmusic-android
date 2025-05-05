@@ -16,7 +16,7 @@ class CoverService(
         return coverRepository.getAllCovers()
     }
 
-    fun getAllGeneratedCoverGroups(): OperationResult<List<CoverGroupDetailDto>> {
+    fun getAllGeneratedCoverGroups(): OperationResult<List<CoverGroupItemDto>> {
         return coverRepository.getAllGeneratedCoverGroups()
     }
 

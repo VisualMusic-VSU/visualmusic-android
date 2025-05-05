@@ -26,7 +26,12 @@ class CoverGroupItemListAdapter(
 
         fun bind(model: CoverGroupItemDto) {
             binding.apply {
-                authorName.text = model.ownerUsername
+                if (model.ownerUsername != null) {
+                    authorName.text = model.ownerUsername
+                } else {
+                    authorName.visibility = View.GONE
+                }
+
                 title.text = model.title
             }
 
