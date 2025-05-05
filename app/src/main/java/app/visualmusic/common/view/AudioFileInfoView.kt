@@ -52,21 +52,10 @@ class AudioFileInfoView @JvmOverloads constructor(
         }
     }
 
-    fun setEnabledState(enabled: Boolean) {
-//        val textAlphaResId = if (enabled) R.dimen.alpha_38 else R.dimen.alpha_100
-//        val backgroundColorResId =
-//            if (enabled) R.color.md_theme_onSurfaceVariant else R.color.md_theme_onSurface
-        val backgroundAlphaResId = if (enabled) R.dimen.alpha_38 else R.dimen.alpha_100
-
-        binding.apply {
-            root.alpha = resources.getDimension(backgroundAlphaResId)
-        }
-    }
-
     fun setFileNotChooseState() {
         setAudioName(resources.getString(R.string.file_not_choose_audio_name))
         setAudioSize(0)
-        setAudioSize(0)
+        setAudioDuration(0)
     }
 
     fun setAudioData(audioUri: Uri) {

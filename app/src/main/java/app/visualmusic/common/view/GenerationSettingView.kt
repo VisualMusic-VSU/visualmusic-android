@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.FrameLayout
 import app.visualmusic.R
+import app.visualmusic.common.util.setDebouncedClickListener
 import app.visualmusic.common.util.setEnabledDeep
 import app.visualmusic.databinding.ViewGenerationSettingBinding
 
@@ -69,7 +70,7 @@ class GenerationSettingView @JvmOverloads constructor(
         }
     }
 
-    fun changeStatus(isAuto: Boolean) {
+    fun setIsAutoStatus(isAuto: Boolean) {
         val statusChip = binding.statusChip
 
         if(statusChip.isChecked != isAuto) {
@@ -78,7 +79,7 @@ class GenerationSettingView @JvmOverloads constructor(
     }
 
     fun onSettingBtnClick(action: () -> Unit) {
-        binding.settingsBtn.setOnClickListener {
+        binding.settingsBtn.setDebouncedClickListener {
             action()
         }
     }
