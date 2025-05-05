@@ -35,10 +35,18 @@ class GenerationViewModel @Inject constructor(
     private val _selectedText = MutableStateFlow<String?>(null)
     val selectedText = _selectedText.asLiveData()
 
+    private val _prompt = MutableStateFlow<String?>(null)
+    val prompt = _prompt.asLiveData()
+
     private var coverName: String? = null
 
     fun clearParams() {
         _audioUri.value = null
+        _selectedGenres.value = emptySet()
+        _selectedMood.value = null
+        _selectedStyle.value = null
+        _selectedText.value = null
+        _prompt.value = null
         coverName = null
     }
 
@@ -98,7 +106,7 @@ class GenerationViewModel @Inject constructor(
 
     fun setSelectedStyleFromId(styleId: Long?) {
         Log.d("Test", "setSelectedStyleFromId: $styleId")
-        if(styleId != null) {
+        if (styleId != null) {
             _selectedStyle.value = allStyles.filter {
                 it.id == styleId
             }.toSet().first()
@@ -114,4 +122,12 @@ class GenerationViewModel @Inject constructor(
     }
 
     fun getText() = _selectedText.value
+
+
+    // Prompt
+    fun setPrompt(prompt: String?) {
+        _prompt.value = prompt
+    }
+
+    fun getPrompt() = _prompt.value
 }
