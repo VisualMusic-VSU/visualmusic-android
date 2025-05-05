@@ -40,14 +40,14 @@
         app:layout_constraintTop_toBottomOf="@id/title" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/cancel_btn"
+        android:id="@+id/reset_btn"
         style="@style/Widget.VisualMusic.Button.Outlined"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/margin_10dp"
         android:layout_marginEnd="@dimen/margin_10dp"
         android:layout_marginBottom="@dimen/margin_10dp"
-        android:text="@string/cancel_btn_text"
+        android:text="@string/reset_btn_text"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toLeftOf="@id/apply_btn" />
@@ -61,7 +61,20 @@
         android:layout_marginBottom="@dimen/margin_10dp"
         android:text="@string/apply_btn_text"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toRightOf="@id/cancel_btn"
+        app:layout_constraintLeft_toRightOf="@id/reset_btn"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/cancel_btn"
+        style="@style/Widget.VisualMusic.Button.Outlined"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_10dp"
+        android:layout_marginEnd="@dimen/margin_10dp"
+        android:layout_marginBottom="@dimen/margin_10dp"
+        android:text="@string/cancel_btn_text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

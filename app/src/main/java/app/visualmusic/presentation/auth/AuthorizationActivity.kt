@@ -12,7 +12,9 @@ import app.visualmusic.common.util.paddingBy
 import app.visualmusic.databinding.ActivityAuthorizationBinding
 import app.visualmusic.presentation.main.MainActivity
 import app.visualmusic.presentation.reg.RegistrationActivity
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class AuthorizationActivity : AppCompatActivity() {
     private lateinit var binding: ActivityAuthorizationBinding
 

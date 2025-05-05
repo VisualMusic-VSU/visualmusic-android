@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/cover_slider"
+        android:layout_width="192dp"
+        android:layout_height="192dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.tbuonomo.viewpagerdotsindicator.DotsIndicator
+        android:id="@+id/dots_indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_5dp"
+        android:visibility="gone"
+        app:dotsColor="@color/dots_inactive_color"
+        app:dotsCornerRadius="4dp"
+        app:dotsSize="7dp"
+        app:dotsSpacing="@dimen/margin_2dp"
+        app:dotsWidthFactor="2.5"
+        app:layout_constraintBottom_toBottomOf="@id/cover_slider"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:selectedDotColor="@color/dots_active_color" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/author_name"
+        style="@style/TextAppearance.VisualMusic.LabelSmall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_5dp"
+        android:layout_marginTop="@dimen/margin_2dp"
+        android:text="Имя автора"
+        app:layout_constraintTop_toBottomOf="@id/cover_slider" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/title"
+        style="@style/TextAppearance.VisualMusic.BodySmall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_5dp"
+        android:layout_marginTop="@dimen/margin_2dp"
+        android:text="Название обложки"
+        app:layout_constraintTop_toBottomOf="@id/author_name" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

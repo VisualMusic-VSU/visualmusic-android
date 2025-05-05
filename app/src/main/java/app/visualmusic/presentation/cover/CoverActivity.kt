@@ -8,6 +8,7 @@ import androidx.core.content.ContextCompat
 import androidx.core.view.WindowInsetsCompat.Type.navigationBars
 import androidx.core.view.WindowInsetsCompat.Type.statusBars
 import app.visualmusic.R
+import app.visualmusic.common.adapter.CoverSliderAdapter
 import app.visualmusic.common.util.edgeToEdge
 import app.visualmusic.common.util.paddingBy
 import app.visualmusic.common.util.getDensity
@@ -15,8 +16,10 @@ import app.visualmusic.common.util.getWidthPx
 import app.visualmusic.databinding.ActivityCoverBinding
 import com.google.android.material.appbar.AppBarLayout
 import com.google.android.material.appbar.AppBarLayout.OnOffsetChangedListener
+import dagger.hilt.android.AndroidEntryPoint
 import kotlin.math.abs
 
+@AndroidEntryPoint
 class CoverActivity : AppCompatActivity() {
     private lateinit var binding: ActivityCoverBinding
 
@@ -73,7 +76,7 @@ class CoverActivity : AppCompatActivity() {
     private fun setupCoverSlider() {
         val coverSlider = binding.coverSlider
 
-        coverSlider.adapter = CoverSliderAdapter(this)
+        coverSlider.adapter = CoverSliderAdapter(this, listOf())
 
         coverSlider.apply {
             offscreenPageLimit = 1

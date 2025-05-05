@@ -22,3 +22,5 @@ dependencyResolutionManagement {
 rootProject.name = "VisualMusic"
 include(":app")
 include(":core")
+include(":repository-adapter-in-memory")
+include(":di-hilt")

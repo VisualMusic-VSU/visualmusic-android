@@ -4,5 +4,5 @@ data class CoverGroupItemDto(
     val id: Long,
     val ownerUsername: String?,
     val title: String,
-    val imageUrls: List<Int>
+    val imageUrls: List<String>
 )

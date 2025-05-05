@@ -1,6 +1,9 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+
+    alias(libs.plugins.kapt)
+    alias(libs.plugins.dagger.hilt)
 }
 
 android {
@@ -41,6 +44,9 @@ android {
 
 dependencies {
     implementation(project(":core"))
+    implementation(project(":di-hilt"))
+
+    implementation(libs.dotsindicator)
 
     implementation(libs.androidx.navigation.ui.ktx)
     implementation(libs.androidx.navigation.fragment.ktx)
@@ -54,6 +60,11 @@ dependencies {
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
+
+    implementation(libs.hilt.android)
+    kapt(libs.hilt.compiler)
+
+    implementation(libs.androidx.lifecycle.runtime.ktx)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

@@ -6,7 +6,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import app.visualmusic.databinding.FragmentCollectionBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class CollectionFragment : Fragment() {
     private lateinit var binding: FragmentCollectionBinding
 

@@ -8,7 +8,9 @@ import androidx.navigation.ui.setupWithNavController
 import app.visualmusic.common.util.edgeToEdge
 import app.visualmusic.common.util.paddingBy
 import app.visualmusic.databinding.ActivityMainBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
 

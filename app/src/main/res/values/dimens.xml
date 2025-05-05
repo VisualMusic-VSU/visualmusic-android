@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!--  Margin  -->
+    <dimen name="margin_2dp">2dp</dimen>
     <dimen name="margin_5dp">5dp</dimen>
     <dimen name="margin_8dp">8dp</dimen>
     <dimen name="margin_10dp">10dp</dimen>
@@ -20,10 +21,12 @@
     <dimen name="padding_5dp">5dp</dimen>
     <dimen name="padding_8dp">8dp</dimen>
     <dimen name="padding_10dp">10dp</dimen>
+    <dimen name="padding_15dp">15dp</dimen>
 
     <!--  Corner Radius  -->
     <dimen name="corner_0dp">0dp</dimen>
     <dimen name="corner_10dp">10dp</dimen>
+    <dimen name="corner_12dp">12dp</dimen>
     <dimen name="corner_15dp">15dp</dimen>
     <dimen name="corner_28dp">28dp</dimen>
     <dimen name="corner_40dp">40dp</dimen>
