@@ -1,12 +1,16 @@
 package app.visualmusic.common.view
 
 import android.content.Context
+import android.net.Uri
 import android.text.format.Formatter.formatFileSize
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.widget.FrameLayout
 import app.visualmusic.R
 import app.visualmusic.common.util.formatDuration
+import app.visualmusic.common.util.getAudioDurationInSec
+import app.visualmusic.common.util.getFileName
+import app.visualmusic.common.util.getFileSize
 import app.visualmusic.databinding.ViewAudioFileInfoBinding
 
 class AudioFileInfoView @JvmOverloads constructor(
@@ -48,15 +52,41 @@ class AudioFileInfoView @JvmOverloads constructor(
         }
     }
 
-    fun setAudioName(name: String) {
+    fun setEnabledState(enabled: Boolean) {
+//        val textAlphaResId = if (enabled) R.dimen.alpha_38 else R.dimen.alpha_100
+//        val backgroundColorResId =
+//            if (enabled) R.color.md_theme_onSurfaceVariant else R.color.md_theme_onSurface
+        val backgroundAlphaResId = if (enabled) R.dimen.alpha_38 else R.dimen.alpha_100
+
+        binding.apply {
+            root.alpha = resources.getDimension(backgroundAlphaResId)
+        }
+    }
+
+    fun setFileNotChooseState() {
+        setAudioName(resources.getString(R.string.file_not_choose_audio_name))
+        setAudioSize(0)
+        setAudioSize(0)
+    }
+
+    fun setAudioData(audioUri: Uri) {
+        setAudioName(
+            getFileName(context, audioUri)
+                ?: resources.getString(R.string.file_not_choose_audio_name)
+        )
+        setAudioSize(getFileSize(context, audioUri))
+        setAudioDuration(getAudioDurationInSec(context, audioUri))
+    }
+
+    private fun setAudioName(name: String) {
         binding.audioName.text = name
     }
 
-    fun setAudioSize(sizeInBytes: Long) {
+    private fun setAudioSize(sizeInBytes: Long) {
         binding.audioSize.text = formatFileSize(context, sizeInBytes)
     }
 
-    fun setAudioDuration(durationInSeconds: Long) {
+    private fun setAudioDuration(durationInSeconds: Long) {
         binding.audioDuration.text = formatDuration(context, durationInSeconds)
     }
 }

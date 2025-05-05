@@ -5,6 +5,7 @@
 
     <!--  Additional  -->
     <color name="transparent">#00000000</color>
+    <color name="opacity_12">#5C403D</color>
 
     <!--  Mood  -->
     <color name="laughter_color">#80DF8E1D</color>
