@@ -1,14 +1,17 @@
 package app.visualmusic.presentation.generation.screen.detail
 
 import android.app.Dialog
+import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
+import android.view.inputmethod.InputMethodManager
+import androidx.fragment.app.activityViewModels
 import app.visualmusic.R
 import app.visualmusic.common.util.setBottomSheetHeight
 import app.visualmusic.databinding.BottomSheetTextEditorBinding
+import app.visualmusic.presentation.generation.GenerationViewModel
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 
@@ -18,6 +21,7 @@ class TextEditorBottomSheet : BottomSheetDialogFragment() {
     }
 
     private lateinit var binding: BottomSheetTextEditorBinding
+    private val viewModel: GenerationViewModel by activityViewModels()
 
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
         val dialog = super.onCreateDialog(savedInstanceState) as BottomSheetDialog
@@ -44,6 +48,7 @@ class TextEditorBottomSheet : BottomSheetDialogFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         setupBtnListeners()
+        setupTextEditor()
     }
 
     private fun setupBtnListeners() {
@@ -52,14 +57,25 @@ class TextEditorBottomSheet : BottomSheetDialogFragment() {
                 dismiss()
             }
             applyBtn.setOnClickListener {
-                onApplyBtnClick()
+                viewModel.setText(textEdit.text?.toString() ?: "")
+                dismiss()
             }
         }
     }
 
+    private fun setupTextEditor() {
+        binding.apply {
+            textEdit.postDelayed({
+                textEdit.requestFocus()
+                val imm =
+                    context?.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+                imm.showSoftInput(textEdit, InputMethodManager.SHOW_IMPLICIT)
+            }, 200)
 
-    private fun onApplyBtnClick() {
-        Toast.makeText(context, "Apply Btn Clicked", Toast.LENGTH_SHORT).show()
-        dismiss()
+            viewModel.getText()?.let {
+                textEdit.setText(it)
+                textEdit.setSelection(it.length)
+            }
+        }
     }
 }
